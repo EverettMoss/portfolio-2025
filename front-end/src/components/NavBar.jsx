@@ -9,8 +9,8 @@ const NavBar = () => {
   const items = [
     {
       label: "About",
-      bgColor: "oklch(67.3% 0.182 276.935)",
-      textColor: "#fff",
+      bgColor: "oklch(90.1% 0.058 230.902)",
+      textColor: "#000",
       links: [
         { label: "About Me", ariaLabel: "About Me", href: "/about" },
         { label: "Experience", ariaLabel: "About Experience", href: "/experience" }
@@ -18,8 +18,8 @@ const NavBar = () => {
     },
     {
       label: "Projects",
-      bgColor: "oklch(70.2% 0.183 293.541)",
-      textColor: "#fff",
+      bgColor: "oklch(87% 0.065 274.039)",
+      textColor: "#000",
       links: [
         { label: "See More", ariaLabel: "See More Projects", href: "/projects" },
 
@@ -27,13 +27,12 @@ const NavBar = () => {
     },
     {
       label: "Contact",
-      bgColor: "oklch(90.3% 0.076 319.62)",
+      bgColor: "oklch(90.2% 0.063 306.703)",
       textColor: "#000",
       links: [
         { label: "Email", ariaLabel: "Email Me", href: "mailto:everettmoss.cs@gmail.com" },
-        { label: "Twitter", ariaLabel: "Twitter", href: "https://www.linkedin.com/in/everettmoss/" },
         { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/everettmoss/" },
-        { label: "Github", ariaLabel: "Github", href: "https://github.com/EverettMoss" }
+        { label: "Github", ariaLabel: "Github", href: "https://github.com/EverettMoss", target: "_blank", rel: "noopener noreferrer" }
       ]
     }
   ];
