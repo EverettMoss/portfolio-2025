@@ -62,7 +62,7 @@ const Projects = () => {
 
     return (
         <>
-            <div className="grid grid-cols-3 grid-rows-2 gap-4 p-4 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 items-stretch">
                 {items.map((item, index) => (
                     <div key={index}>
 
