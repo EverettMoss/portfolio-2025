@@ -1,7 +1,7 @@
 import CardNav from './CardNav'
-//import logo from '../logo.svg';
 import logo from '../assets/gradpic.png';
 import { Link } from 'react-router-dom';
+import everett_logo from '../../public/everett_logo.svg'
 
 const NavBar = () => {
 
@@ -39,7 +39,7 @@ const NavBar = () => {
 
   return (
     <CardNav
-      logo={logo}
+      logo={everett_logo}
       logoAlt="Company Logo"
       items={items}
       baseColor="#fff"
