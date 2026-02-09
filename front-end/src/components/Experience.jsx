@@ -1,5 +1,4 @@
 import {
-    Button,
     Timeline,
     TimelineBody,
     TimelineContent,
@@ -8,7 +7,7 @@ import {
     TimelineTime,
     TimelineTitle,
 } from "flowbite-react";
-import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+import { HiCalendar } from "react-icons/hi";
 
 const Experience = () => {
     const StyledTimelineTitle = ({ children, className = "", ...props }) => (
@@ -36,23 +35,17 @@ const Experience = () => {
                 <TimelineItem>
                     <TimelinePoint icon={HiCalendar} />
                     <TimelineContent>
-                        <TimelineTime>May 2024 - Nov. 2025</TimelineTime>
-                        <StyledTimelineTitle>Website Developer</StyledTimelineTitle>
-                        <TimelineTitle className="text-grey-500 dark:text-grey-700 font-light italic">CQ Partners</TimelineTitle>
+                        <TimelineTime>May 2024 – Nov 2025</TimelineTime>
+                        <StyledTimelineTitle className="text-lg font-semibold text-black">
+                            Website Developer — CQ Partners
+                        </StyledTimelineTitle>
                         <StyledTimelineBody>
-                            Designed, developed, and maintained customer-branded websites and internal web applications to enhance digital presence and user experience.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Optimized website and application performance through efficient coding practices and troubleshooting techniques.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Utilized PHP, HTML5, CSS, JavaScript/jQuery, and MySQL in daily development workflows.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Responded to client requests with timely, creative web solutions tailored to individual business needs.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Applied knowledge of SEO best practices and web standards to support clients’ digital marketing efforts.
+                            <ul className="mt-2 list-disc pl-5 space-y-1">
+                                <li>Designed and maintained customer-branded websites and internal web apps.</li>
+                                <li>Improved performance through efficient coding and troubleshooting.</li>
+                                <li>Built solutions with PHP, HTML5, CSS, JavaScript/jQuery, and MySQL.</li>
+                                <li>Delivered creative, timely solutions aligned to client needs and SEO best practices.</li>
+                            </ul>
                         </StyledTimelineBody>
                     </TimelineContent>
                 </TimelineItem>
@@ -60,26 +53,17 @@ const Experience = () => {
                 <TimelineItem>
                     <TimelinePoint icon={HiCalendar} />
                     <TimelineContent>
-                        <TimelineTime>Feb. 2023 - May 2024</TimelineTime>
-                        <StyledTimelineTitle>Data Analyst </StyledTimelineTitle>
-                        <TimelineTitle className="text-grey-500 dark:text-grey-700 font-light italic">Nex Level Networks</TimelineTitle>
+                        <TimelineTime>Feb 2023 – May 2024</TimelineTime>
+                        <StyledTimelineTitle className="text-lg font-semibold text-black">
+                            Data Analyst — Nex Level Networks
+                        </StyledTimelineTitle>
                         <StyledTimelineBody>
-                            Planned and developed a verification system used by over hundreds students using PHP, Python, and SQL.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Managing websites developed using the LAMP (Linux, Apache, MySQL, PHP) stack and WordPress.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Optimized SEO for websites which has led to 20-30% increases in monthly traffic.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Collaborated directly with clients to plan and build custom websites, ensuring alignment with their requirements.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Created and managed virtual Linux servers for clients, ensuring efficient and reliable hosting solutions.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Provided remote IT troubleshooting support for clients, resolving issues efficiently from the help desk.
+                            <ul className="mt-2 list-disc pl-5 space-y-1">
+                                <li>Built a verification system used by hundreds of students with PHP, Python, and SQL.</li>
+                                <li>Managed LAMP and WordPress sites, improving SEO and monthly traffic by 20–30%.</li>
+                                <li>Collaborated with clients to plan and ship custom websites.</li>
+                                <li>Provisioned Linux servers and provided remote IT troubleshooting.</li>
+                            </ul>
                         </StyledTimelineBody>
                     </TimelineContent>
                 </TimelineItem>
@@ -87,20 +71,16 @@ const Experience = () => {
                 <TimelineItem>
                     <TimelinePoint icon={HiCalendar} />
                     <TimelineContent>
-                        <TimelineTime>Aug. 2022 - Nov. 2022</TimelineTime>
-                        <StyledTimelineTitle>Software Engineer, Intern </StyledTimelineTitle>
-                        <TimelineTitle className="text-grey-500 dark:text-grey-700 font-light italic">M.S. Hall + Associates </TimelineTitle>
+                        <TimelineTime>Aug 2022 – Nov 2022</TimelineTime>
+                        <StyledTimelineTitle className="text-lg font-semibold text-black">
+                            Software Engineer Intern — M.S. Hall + Associates
+                        </StyledTimelineTitle>
                         <StyledTimelineBody>
-                            Modernized legacy code by refactoring classes for improved object-oriented design.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Set up and conducted PHPUnit tests for all new hospital projects to ensure robust code quality.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Wrote and tested SQL queries to compute financial processes and standardize values across tables.
-                        </StyledTimelineBody>
-                        <StyledTimelineBody>
-                            Developed PHP scripts to clean and format raw hospital data for seamless integration into the codebase.
+                            <ul className="mt-2 list-disc pl-5 space-y-1">
+                                <li>Refactored legacy classes to improve object-oriented design.</li>
+                                <li>Built PHPUnit test coverage for new hospital projects.</li>
+                                <li>Wrote SQL queries and PHP scripts to standardize and clean data.</li>
+                            </ul>
                         </StyledTimelineBody>
                     </TimelineContent>
                 </TimelineItem>

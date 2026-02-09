@@ -1,60 +1,40 @@
-import { Card } from "flowbite-react";
-
-
 const Projects = () => {
     const items = [
         {
-            type: "card",
             title: "Song Credits Database",
             link: "#",
-            lines: [
-                "Languages used: React, MongoDB, Node, Express",
-                "Styling: TailwindCSS"
-            ]
+            description: "A searchable database for song credits and collaborators.",
+            tech: ["React", "MongoDB", "Node", "Express", "TailwindCSS"]
         },
         {
-            type: "card",
             title: "Apple Music Rewind",
             link: "#",
-            lines: [
-                "Languages used: React",
-                "Libraries used: moment, papaparse, chart.js",
-                "Styling: TailwindCSS"
-            ]
+            description: "A personal listening recap with charts and highlights.",
+            tech: ["React", "moment", "papaparse", "chart.js", "TailwindCSS"]
         },
         {
-            type: "card",
             title: "SoundCloud Stats",
             link: "#",
-            lines: [
-                "Languages used: React, Node, Express",
-                "Styling: TailwindCSS"
-            ]
+            description: "Sort any user's tracks by plays, comments, reposts, and likes.",
+            tech: ["React", "Node", "Express", "TailwindCSS"]
         },
         {
-            type: "card",
             title: "Baby Name API",
             link: "#",
-            lines: [
-                "Languages used: Node & Express"
-            ]
+            description: "A simple API for searching and filtering baby names.",
+            tech: ["Node", "Express"]
         },
         {
-            type: "card",
             title: "Twitch Widget",
             link: "#",
-            lines: [
-                "Languages used: HTML, CSS, JS"
-            ]
+            description: "A lightweight widget for live stream status and stats.",
+            tech: ["HTML", "CSS", "JavaScript"]
         },
         {
-            type: "card",
             title: "Portfolio Website",
             link: "#",
-            lines: [
-                "Languages used: React",
-                "Styling: TailwindCSS"
-            ]
+            description: "A focused portfolio showcasing my recent work.",
+            tech: ["React", "TailwindCSS"]
         }
     ];
 
@@ -62,28 +42,34 @@ const Projects = () => {
 
     return (
         <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 items-stretch">
+            <div className="mb-6">
+                <h1 className="text-2xl font-bold">Projects</h1>
+                <p className="mt-2 text-base text-black/70">
+                    A selection of projects that highlight my interests across web apps, data, and user experience.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                 {items.map((item, index) => (
-                    <div key={index}>
-
-                        {/* Number cell */}
-                        {item.type === "number" && item.label}
-
-                        {/* Card cell */}
-                        {item.type === "card" && (
-                            <Card href={item.link} className="max-w-sm bg-white dark:bg-gray-800 p-4 rounded-xl h-full flex flex-col">
-                                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    {item.title}
-                                </h5>
-                                {item.lines.map((line, i) => (
-                                    <p key={i} className="font-normal text-gray-700 dark:text-gray-400">
-                                        {line}
-                                    </p>
-                                ))}
-                            </Card>
-                        )}
-
-                    </div>
+                    <a
+                        key={index}
+                        href={item.link}
+                        className="rounded-lg border border-black/10 p-4 h-full flex flex-col hover:shadow-sm transition-shadow"
+                    >
+                        <h5 className="text-xl font-semibold tracking-tight text-gray-900">
+                            {item.title}
+                        </h5>
+                        <p className="mt-2 text-sm text-gray-700">
+                            {item.description}
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                            {item.tech.map((tag, i) => (
+                                <span key={i} className="rounded-full border border-black/10 px-2.5 py-1 text-xs">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </a>
                 ))}
             </div>
 

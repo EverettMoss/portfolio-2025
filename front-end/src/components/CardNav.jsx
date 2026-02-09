@@ -172,7 +172,7 @@ const CardNav = ({
           <button
             type="button"
             onClick={goToHome}
-            className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none"
+            className="logo-container flex items-center cursor-pointer md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none"
             aria-label="Go to home"
           >
             <img src={logo} alt={logoAlt} className="logo h-[28px]" />
