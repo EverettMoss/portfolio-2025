@@ -1,9 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-// use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
-import Home from './Home';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const CardNav = ({
@@ -135,7 +133,11 @@ const CardNav = ({
     if (el) cardsRef.current[i] = el;
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isCardActive = (item) =>
+    item.links?.some(lnk => lnk.href && location.pathname === lnk.href);
 
   const goToHome = () => {
     navigate('/')
@@ -200,8 +202,11 @@ const CardNav = ({
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
-              <div className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px]">
+              <div className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px] flex items-center gap-2">
                 {item.label}
+                {isCardActive(item) && (
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-current opacity-50" aria-hidden="true" />
+                )}
               </div>
               <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
                 {item.links?.map((lnk, i) => (
@@ -210,6 +215,8 @@ const CardNav = ({
                     className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}
+                    target={lnk.target}
+                    rel={lnk.rel}
                   >
                     <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
                     {lnk.label}

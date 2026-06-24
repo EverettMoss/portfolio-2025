@@ -30,8 +30,8 @@ const NavBar = () => {
       bgColor: "oklch(90.2% 0.063 306.703)",
       textColor: "#000",
       links: [
-        { label: "Email", ariaLabel: "Email Me", href: "mailto:everettmoss.cs@gmail.com" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/everettmoss/" },
+        { label: "Email", ariaLabel: "Email Me", href: "mailto:everettmoss.cs@gmail.com", target: "_blank", rel: "noopener noreferrer" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/everettmoss/", target: "_blank", rel: "noopener noreferrer" },
         { label: "Github", ariaLabel: "Github", href: "https://github.com/EverettMoss", target: "_blank", rel: "noopener noreferrer" }
       ]
     }

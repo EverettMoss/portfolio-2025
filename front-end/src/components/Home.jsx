@@ -30,36 +30,27 @@ const Home = () => {
                     <div className="mb-10">
                         <h2 className="text-lg font-semibold">Featured Projects</h2>
                         <div className="mt-4 grid gap-4 md:grid-cols-3">
-                            <div className="rounded-lg border border-black/10 p-4">
+                            <Link to="/projects" className="rounded-lg border border-black/10 p-4 hover:shadow-sm transition-shadow">
                                 <h3 className="font-semibold">Portfolio 2025</h3>
                                 <p className="mt-2 text-sm text-black/70">React, Vite, Tailwind</p>
                                 <p className="mt-2 text-sm">
                                     A fast, focused portfolio with clear navigation and responsive layout.
                                 </p>
-                            </div>
-                            <div className="rounded-lg border border-black/10 p-4">
+                            </Link>
+                            <Link to="/projects" className="rounded-lg border border-black/10 p-4 hover:shadow-sm transition-shadow">
                                 <h3 className="font-semibold">SoundCloud Stats</h3>
                                 <p className="mt-2 text-sm text-black/70">React, Node, Express</p>
                                 <p className="mt-2 text-sm">
                                     Sort any user's SoundCloud tracks by play count, comments, reposts, and likes.
                                 </p>
-                            </div>
-                            <div className="rounded-lg border border-black/10 p-4">
+                            </Link>
+                            <Link to="/projects" className="rounded-lg border border-black/10 p-4 hover:shadow-sm transition-shadow">
                                 <h3 className="font-semibold">NBA Prediction Model</h3>
                                 <p className="mt-2 text-sm text-black/70">Python, Pandas, Modeling</p>
                                 <p className="mt-2 text-sm">
                                     A predictive model that forecasts game outcomes and season trends.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mb-10">
-                        <h2 className="text-lg font-semibold">Quick Stats</h2>
-                        <div className="mt-4 flex flex-wrap gap-3">
-                            <span className="rounded-full border border-black/10 px-3 py-1 text-sm">3+ years building web apps</span>
-                            <span className="rounded-full border border-black/10 px-3 py-1 text-sm">12+ shipped projects</span>
-                            <span className="rounded-full border border-black/10 px-3 py-1 text-sm">React, Node, PostgreSQL</span>
+                            </Link>
                         </div>
                     </div>
 
